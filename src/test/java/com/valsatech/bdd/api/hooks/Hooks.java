@@ -3,6 +3,7 @@ package com.valsatech.bdd.api.hooks;
 
 import java.io.FileInputStream;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import com.valsatech.bdd.libraries.UIDriver;
 import cucumber.api.java.After;
@@ -22,6 +23,10 @@ public class Hooks {
 			if(UIDriver.configprop.getProperty("Browser").equalsIgnoreCase("firefox"))
 			{
 				UIDriver.driver = new FirefoxDriver();		
+			}else {
+				System.setProperty("webdriver.chrome.driver", "/drivers/chromedriver.exe");
+				UIDriver.driver = new ChromeDriver();		
+
 			}
 		
 		} 

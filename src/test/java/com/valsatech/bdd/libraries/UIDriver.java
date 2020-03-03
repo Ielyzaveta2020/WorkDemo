@@ -47,8 +47,8 @@ public class UIDriver {
 		try
 		{
 			
-			findElement(ele).clear();
-			findElement(ele).sendKeys(val);
+			UIDriver.driver.findElement(ele).clear();
+			UIDriver.driver.findElement(ele).sendKeys(val);
 			return true;
 		}
 		catch(Exception e)

@@ -17,9 +17,9 @@ public class Login extends UIDriver{
 	 * 
 	 * Object References
 	 */
-	By Login = By.id("login_button");
-	By Username = By.id("user_name");
-	By Password = By.id("user_password");
+	By Login = By.xpath("//button[@value='submit']");
+	By Username = By.id("email");
+	By Password = By.id("password");
 	By Logoff = By.id("logout_link");
 	By Error = By.xpath("//span[@class='error']");
 	String result;
@@ -45,6 +45,8 @@ public class Login extends UIDriver{
 		{
 			arg2 = UIDriver.configprop.getProperty(arg2.replace("}", "").replace("{", ""));
 		}
+		System.out.println("This line is executing 111111111111111111");
+		
 		enter_text(Username, arg1);
 		enter_text(Password, arg2);
 	    //UIDriver.mystep.write(result);

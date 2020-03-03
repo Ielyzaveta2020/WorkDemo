@@ -3,6 +3,7 @@ Feature: Login
   I want to login to SugarCRM
   So that I can use the features of application
 
+@Test
   Scenario Outline: Login to SugarCRM
     Given I am on SugarCRM login page
     When I enter "<username>" and "<password>"
@@ -11,5 +12,5 @@ Feature: Login
 
     Examples: 
       | username | password  | valid |
-      | raghav   | admin | true  |
-      | chandra  | valsatech | true  |
+      | Liza.fabryka@valsatechcorp.com  | December18 | true  |
+    #  | chandra  | valsatech | true  |

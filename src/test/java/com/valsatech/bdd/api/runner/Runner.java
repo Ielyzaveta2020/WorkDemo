@@ -21,9 +21,9 @@ excludeCoverageTags = {"@flaky" },
 includeCoverageTags = {"@passed" },
 outputFolder = "target")
 @CucumberOptions(plugin = { "html:target/cucumber-html-report", "json:target/cucumber.json", "pretty:target/cucumber-pretty.txt","usage:target/cucumber-usage.json","junit:target/cucumber-results.xml"  },
-		features={"features"},
+		features={"features/1-Login.feature"},
 		glue={"classpath:com.valsatech.bdd.api.stepdefs","classpath:com.valsatech.bdd.api.hooks"}
-		
+		//,tags= {"@Test"}
 		)
 
 public class Runner {
